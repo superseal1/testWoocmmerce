@@ -3,11 +3,11 @@
 	Plugin Name: SimplyPost WooCommerce Extension
 	Plugin URI: 
 	Description: Obtain live shipping rates via SimplyPost Shipping API.
-	Version: 1.0.2
+	Version: 1.0.3
 	Author: SimplyPost
 	Author URI: https://www.simplypost.asia/
 	Text Domain: wc-shipping-simplypost
-	WC requires at least: 1.0.2
+	WC requires at least: 1.0.3
 	WC tested up to: 1.0
 */
 if (!defined('WF_Simplypost_ID')){
@@ -118,7 +118,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/superseal1/testWoocmmerce',
 	__FILE__,
-	'simplypost-woocommerce-shipping-method'
+	'wf_simplypost_wooCommerce_shipping_setup'
 );
 
 //Optional: If you're using a private repository, specify the access token like this:
