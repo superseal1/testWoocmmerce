@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 return array(
 	'enabled'          => array(
-		'title'           => __( 'Relatime Rates Khoi' ),
+		'title'           => __( 'Relatime Rates' ),
 		'type'            => 'checkbox',
 		'label'           => __( 'Enable' ),
 		'default'         => 'no'
