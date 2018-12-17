@@ -81,7 +81,7 @@ class wf_simplypost_woocommerce_shipping_method extends WC_Shipping_Method {
 				);
 			}
 			$quantity_item = $values['quantity'];
-			$weight_packet += round( $values['data']->get_weight() * $quantity_item);
+			$weight_packet += round( wc_get_weight($values['data']->get_weight(), 'kg') * $quantity_item);
 			$price_packet += round( $values['data']->get_price() * $quantity_item); 
 		}
 
