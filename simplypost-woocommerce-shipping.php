@@ -3,11 +3,11 @@
 	Plugin Name: SimplyPost WooCommerce Extension
 	Plugin URI: 
 	Description: Obtain live shipping rates via SimplyPost Shipping API.
-	Version: 1.0.3
+	Version: 1.0.4
 	Author: SimplyPost
 	Author URI: https://www.simplypost.asia/
 	Text Domain: wc-shipping-simplypost
-	WC requires at least: 1.0.3
+	WC requires at least: 1.0.4
 	WC tested up to: 1.0
 */
 if (!defined('WF_Simplypost_ID')){
