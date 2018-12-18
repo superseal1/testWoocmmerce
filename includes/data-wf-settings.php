@@ -17,7 +17,7 @@ return array(
 	'shipping_site'		=> array(
 		'title'           => __( 'Shipping Site' ),
 		'type'            => 'text',
-		'default'         => __( 'https://d3671dc8.ngrok.io/' ),
+		// 'default'         => __( 'https://d3671dc8.ngrok.io/' ),
 		'desc_tip'        => true
 	),
     'api_key'           => array(
@@ -27,13 +27,5 @@ return array(
 		'custom_attributes' => array(
 			'autocomplete' => 'off'
 		)
-	),
-	'debug'      		=> array(
-		'title'           => __( 'Debug Mode' ),
-		'label'           => __( 'Enable debug mode' ),
-		'type'            => 'checkbox',
-		'default'         => 'no',
-		'desc_tip'    	  => true,
-		'description'     => __( 'Enable debug mode to show debugging information on the cart/checkout.' )
 	)
 );

@@ -28,16 +28,16 @@ class wf_simplypost_woocommerce_shipping_method extends WC_Shipping_Method {
 		
 		$this->api_key         = $this->get_option( 'api_key' );
 
-		$this->debug           = ( $bool = $this->get_option( 'debug' ) ) && $bool == 'yes' ? true : false;
+		// $this->debug           = ( $bool = $this->get_option( 'debug' ) ) && $bool == 'yes' ? true : false;
 
 		add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
 	}
 
-	public function debug( $message, $type = 'notice' ) {
-		if ( $this->debug ) {
-			wc_add_notice( $message, $type );
-		}
-	}
+	// public function debug( $message, $type = 'notice' ) {
+	// 	if ( $this->debug ) {
+	// 		wc_add_notice( $message, $type );
+	// 	}
+	// }
 
 	public function admin_options() {
 		// Show settings
