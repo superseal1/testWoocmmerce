@@ -72,7 +72,8 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 				add_action( 'woocommerce_shipping_init', array( $this, 'wf_simplypost_wooCommerce_shipping_init' ) );
 				add_filter( 'woocommerce_shipping_methods', array( $this, 'wf_simplypost_wooCommerce_shipping_methods' ) );		
 				add_filter( 'admin_enqueue_scripts', array( $this, 'wf_simplypost_scripts' ) );		
-							
+				add_action( 'woocommerce_checkout_update_order_review', 'wf_simplypost_checkout_update_order_review', 10, 2);
+
 			}
 
 			public function init(){
@@ -99,13 +100,16 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 			public function wf_simplypost_wooCommerce_shipping_init() {
 				include_once( 'includes/class-wf-simplypost-woocommerce-shipping.php' );
 			}
-
 			
 			public function wf_simplypost_wooCommerce_shipping_methods( $methods ) {
-				$methods[] = 'wf_simplypost_woocommerce_shipping_method';
+				$methods['wf_simplypost_woocommerce_shipping'] = 'wf_simplypost_woocommerce_shipping_method';
 				return $methods;
 			}	
 			
+			public function wf_simplypost_checkout_update_order_review($array, $int) {
+				WC()->cart->calculate_shipping();
+				return;
+			}
 			
 		}
 		new wf_simplypost_wooCommerce_shipping_setup();
