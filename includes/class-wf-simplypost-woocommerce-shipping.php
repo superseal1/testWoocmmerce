@@ -194,17 +194,10 @@ class wf_simplypost_woocommerce_shipping_method extends WC_Shipping_Method {
   public function add_found_rates() {
     if ( $this->found_rates ) {
 
-      uasort( $this->found_rates, array( $this, 'sort_rates' ) );
-
       foreach ( $this->found_rates as $key => $rate ) {
         $this->add_rate( $rate );
       }
     }
-  }
-
-  public function sort_rates( $a, $b ) {
-    if ( $a['sort'] == $b['sort'] ) return 0;
-    return ( $a['sort'] < $b['sort'] ) ? -1 : 1;
   }
 
   private function wf_load_product( $product ){
